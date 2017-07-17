@@ -60,7 +60,7 @@ class Teacher extends Person {
 
 
     introduceWith(student) {
-        if (student.klass == this.klass) {
+        if (student.klass.number == this.klass.number) {
             return super.introduce() + 'I am a Teacher.I teach ' + student.name + '.';
         }
         else {
