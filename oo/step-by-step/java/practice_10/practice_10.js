@@ -18,17 +18,17 @@ class Student extends Person{
 
     introduce(){
         if(this.klass.leader === this.name){
-            return super.introduce() + 'I am a Student.I am Leader of ' + this.klass.number;
+            return super.introduce() + 'I am a Student.I am Leader of Class ' + this.klass.number;
         }
         else {
-            return super.introduce() + 'I am a Student.I am at ' + this.klass.number;
+            return super.introduce() + 'I am a Student.I am at Class ' + this.klass.number;
         }
     }
 }
 
 class Klass{
     constructor(number){
-        this.number = 'Class' + number;
+        this.number = number;
     }
     assignLeader(student){
         if(student.klass.number == this.number) {
@@ -54,7 +54,7 @@ class Teacher extends Person {
             return super.introduce() + 'I am a Teacher.I teach No Class';
         }
         else {
-            return super.introduce() + 'I am a Teacher.I teach ' + this.klass.number + '.';
+            return super.introduce() + 'I am a Teacher.I teach Class ' + this.klass.number + '.';
         }
     }
 
